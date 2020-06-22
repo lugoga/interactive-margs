@@ -128,7 +128,7 @@ all.marg.html = paste0('<h3 style="color:#7A7A7A;">',grantee$Name,'</h3>',
                        " ",
                        '<i>', grantee$`Research Title`, '</i>','</p>',
                          title = "You can check the page at
-                         <a href = 'https://ir.library.oregonstate.edu/concern/conference_proceedings_or_journals/xd07gt68r' target = '_blank'>  Google Schoolar </a>",
+                         <a href = 'https://ir.library.oregonstate.edu/concern/conference_proceedings_or_journals/xd07gt68r' target = '_blank'>  Google Scholar </a>",
                        "<br>",
                        "<img src='http://www.seascapemodels.org/images/intertidal_scene.JPG' 
                          style='width:280px;height:230px;'>",
@@ -334,7 +334,7 @@ grantee %>%
               )
 ```
 
-Grantee
+Grantees
 =======================
 ```{r}
 # grantee %>%
@@ -462,9 +462,12 @@ ggplotly(aaa)
 
 About
 =========
-This dashboard provides interactive plots and maps that highlight Marine Research Grants (MARGS) work in the Western Indian Ocean Region to access. The dashboard is under active development engineered by [Benjamin Mpinga](benjaminindrw@gmail.com) and [Masumbuko Semba](lugosemba@gmail.com). We are thankful to  WIOMSA for financial support to develop this interactive tool. We also express our profound gratitude to Richard Iannone and his colleagues for developing a **flexdashboard** platform that serve as the backbone of this tool. We have used several open source tools during the development stage and we can not mention them all in this section, we cited some of their work listed heredown;
+This dashboard provides interactive plots and maps that highlight Marine Research Grants (MARGS) work in the Western Indian Ocean Region.You can navigate the tool using standard menu, which serves as pages. You can zoom and pan to the area of interest within the region using the tools of an interactive map. The dashboard is under active development by WIOMSA. We also express our profound gratitude to  individuals who helped to develop and put the tool up and running. Several open source tools were used during the development stage and material consulted are listed heredown;
 
+This is an interactive map that shows MARG benefices. 
 
+1. Richard Iannone, JJ Allaire and Barbara Borges (2018). flexdashboard: R Markdown Format for Flexible Dashboards. R package version 0.5.1.1. https://CRAN.R-project.org/package=flexdashboard
+ 
 1. Yihui Xie and J.J. Allaire and Garrett Grolemund (2018). R   Markdown: The Definitive Guide. Chapman and Hall/CRC. ISBN   9781138359338. URL https://bookdown.org/yihui/rmarkdown.
 
 1. Yihui Xie (2014) knitr: A Comprehensive Tool for Reproducible   Research in R. In Victoria Stodden, Friedrich Leisch and Roger D. Peng, editors, Implementing Reproducible Computational   Research. Chapman and Hall/CRC. ISBN 978-1466561595
