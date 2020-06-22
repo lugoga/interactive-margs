@@ -321,11 +321,13 @@ grantee %>%
          Gender = replace(Gender, Gender=="F", "Female"),
          Institution = replace(Institution, Institution=="KENYA MARINE AND FISHERIES RESEARCH INSTITUTE", "Kenya Marine and Fisheries Research Institute"),
          Institution = replace(Institution, Institution == "STATE UNIVERSITY OF ZANZIBAR",
-                               "State University of Zanzibar"))%>%
+                               "State University of Zanzibar"),
+         Nationality = replace(Nationality,Nationality == "Mauritian", "Mauritius"),
+          Nationality = replace(Nationality,Nationality == "Zimbabwe", "South Africa"))%>%
   select(Institution,`Grant Type`, Country = Nationality, Gender, Year) %>%
   rpivotTable(aggregatorName = "Count", 
               cols = "Country", 
-              rows = "`Grant Type`", height = 800,
+              rows = "Year", 
               rendererName = "Heatmap"
               # vals = "Freq",
               # rendererName = "Table Barchart",
