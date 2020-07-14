@@ -5,6 +5,7 @@ output:
     orientation: rows
     vertical_layout: fill
     social: [ "twitter", "facebook", "menu"]
+    logo: trick_wiomsa_logo.png
     #source_code: embed
 ---
 
@@ -478,4 +479,41 @@ This is an interactive map that shows MARG benefices.
 1. Pebesma, E., (2018). Simple Features for R: Standardized Support for Spatial Vector Data. *The R Journal* 10 (1), 439-446, https://doi.org/10.32614/RJ-2018-009.
 
 
+
+```{r, eval=FALSE}
+library(rpivotTable)
+
+ # use Titanic dataset provided in base R - simple creation with just data
+
+ rpivotTable( Titanic )
+
+ # prepopulate multiple columns and multiple rows
+
+ rpivotTable( Titanic, rows = c("Class","Sex"), cols = c("Age","Survived" ) )
+
+
+ # A more complete example:
+
+ rpivotTable(
+ Titanic,
+ rows = "Survived",
+ cols = c("Class","Sex"),
+ aggregatorName = "Sum as Fraction of Columns",
+ vals = "Freq",
+ rendererName = "Table Barchart"
+ )
+
+# An example with inclusions and exclusions filters:
+
+rpivotTable(
+Titanic,
+rows = "Survived",
+cols = c("Class","Sex"),
+aggregatorName = "Sum as Fraction of Columns",
+inclusions = list( Survived = list("Yes")),
+exclusions= list( Class = list( "Crew")),
+vals = "Freq",
+rendererName = "Table Barchart"
+)
+```
 
